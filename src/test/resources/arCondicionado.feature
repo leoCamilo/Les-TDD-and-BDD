@@ -5,8 +5,8 @@ Feature: Controlar a Temperatura da Sala
   Controle de Temperatura
 
     Given O ar condicionado precisa controlar a temperatura interna da sala
-    When As quantidades de pessoas "<sensorInterno1>", "<sensorInterno2>", "<sensorInterno3>" foram registrados pelos tres sensores internos"
-    And Tendo os valores "<sensorExterno1>", "<sensorExterno2>", "<sensorExterno3>" registrados pelos sensores de temperatura externos"
+    When As quantidades de pessoas "<sensorInterno1>", "<sensorInterno2>", "<sensorInterno3>" foram registrados pelos tres sensores internos
+    And Tendo os valores "<sensorExterno1>", "<sensorExterno2>", "<sensorExterno3>" registrados pelos sensores de temperatura externos
     Then Tanto a media de pessoas "<mediaPessoas>" quanto a media da temperatura externa "<mediaTemperaturaExterna>" são calculados
     And eh calculada e normalizada a temperatura da sala
 
