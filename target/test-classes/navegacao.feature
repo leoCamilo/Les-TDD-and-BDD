@@ -13,3 +13,4 @@ Feature: Navegacao
       | Galway   |   Dublin   |    Waterford   |      Cork     |    Norte     |    Dublin      |
       |  Paris   | Amsterdam  |    Barcelona   |     Porto     |     Sul      |     Porto      |
       | Salvador |  Curitiba  |  Florianopolis |    Vitoria    |    Leste     | Florianopolis  |
+

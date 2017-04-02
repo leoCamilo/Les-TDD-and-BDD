@@ -39,5 +39,4 @@ public class Steps {
     public void resultaria_no_valor_de_reais(String arg1) throws Throwable {
         assertEquals(arg1, Double.toString(calcImposto.getImposto()));
     }
-
 }

@@ -21,8 +21,8 @@ public class Steps {
         arCondicionado = new ArCondicionado();
     }
 
-    @When("^As quantidades de pessoas \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
-    public void as_quantidades_de_pessoas(String arg1, String arg2, String arg3) throws Throwable {
+    @When("^As quantidades de pessoas \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\" foram registrados pelos tres sensores internos\"$")
+    public void as_quantidades_de_pessoas_foram_registrados_pelos_tres_sensores_internos(String arg1, String arg2, String arg3) throws Throwable {
         sensorInterno1.addObserver(arCondicionado);
         sensorInterno1.setCurrentPessoas(Integer.parseInt(arg1), 1);
         sensorInterno2.addObserver(arCondicionado);
@@ -31,8 +31,8 @@ public class Steps {
         sensorInterno3.setCurrentPessoas(Integer.parseInt(arg3), 3);
     }
 
-    @When("^Tendo os valores \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\"$")
-    public void tendo_os_valores(String arg1, String arg2, String arg3) throws Throwable {
+    @When("^Tendo os valores \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\" registrados pelos sensores de temperatura externos\"$")
+    public void tendo_os_valores_registrados_pelos_sensores_de_temperatura_externos(String arg1, String arg2, String arg3) throws Throwable {
         arCondicionado.media_temp_externa(Integer.parseInt(arg1), Integer.parseInt(arg2), Integer.parseInt(arg3));
     }
 
@@ -44,7 +44,7 @@ public class Steps {
 
     @Then("^eh calculada e normalizada a temperatura da sala$")
     public void eh_calculada_e_normalizada_a_temperatura_da_sala() throws Throwable {
-        assertEquals(28, arCondicionado.TEMPERATURA_ALERT);
+        assertEquals(25, arCondicionado.TEMPERATURA_ALERT);
     }
 
 }
