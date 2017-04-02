@@ -55,17 +55,17 @@ public class CalculaImpostoStrategy implements ICalculaImposto {
 	
 	public double calcularImpostoRenda(Pessoa pessoa){
         if (pessoa.getReceita() >= this.minimo && pessoa.getReceita() <= this.maximo){
-             this.imposto = (pessoa.getReceita() * this.aliquota)/100;
+             this.imposto = (pessoa.getReceita() * this.aliquota);
              return this.imposto;
         }
         else{
-            throw new UnsupportedOperationException("SalÃ¡rio nÃ£o pertence a esta aliquota \n" + this.toString());
+            throw new UnsupportedOperationException("Salario nao pertence a esta aliquota \n" + this.toString());
         }
     }
     
     @Override
     public String toString(){
-        return "InformaÃ§Ãµes da aliquota: \n" + 
+        return "Informacoes da aliquota: \n" +
                "Minimo: R$ " + this.minimo + " - Maximo: R$ " + this.maximo + 
                "Aliquota: " + this.aliquota * 100 + "% \n";
     }

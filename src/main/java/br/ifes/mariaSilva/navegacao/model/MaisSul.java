@@ -20,14 +20,23 @@ public class MaisSul extends AbstractAvaliadorDirecional{
     
     @Override
     public Cidade executar(Stack<Cidade> expressoes) {
-        Cidade cidadeResultante = getCidadeAtual();
-        while(!expressoes.empty()){
-            Cidade token = expressoes.pop();
-            if(cidadeResultante.getLatitude() > token.getLatitude()){
-                setCidadeAtual(token);
-            }
+        Cidade cidadeSelecionada = null;
+
+        if(!expressoes.empty()){
+            cidadeSelecionada = expressoes.pop();
         }
-        return cidadeResultante;
+        else {
+           cidadeSelecionada = getCidadeAtual();
+        }
+
+        while(!expressoes.empty()){
+            Cidade cidadeComparacao = expressoes.pop();
+            if(cidadeSelecionada.getLatitude() > cidadeComparacao.getLatitude()){
+                cidadeSelecionada = cidadeComparacao;
+            }
+
+        }
+        return cidadeSelecionada;
     }
 
 	

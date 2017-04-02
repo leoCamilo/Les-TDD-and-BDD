@@ -10,7 +10,7 @@ Feature: Navegacao
 
     Examples:
       | cidade1  |   cidade2  |     cidade3    |    cidade4    | pontoCardeal | cidadeResposta |
-      | Galway   |   Dublin   |    Waterford   |      Cork     |    Norte     |    Dublin      |
+      | Galway   |   Dublin   |    Waterford   |   Amsterdam   |    Norte     |    Amsterdam   |
       |  Paris   | Amsterdam  |    Barcelona   |     Porto     |     Sul      |     Porto      |
-      | Salvador |  Curitiba  |  Florianopolis |    Vitoria    |    Leste     | Florianopolis  |
+      | Salvador |  Curitiba  |  Florianopolis |    Vitoria    |    Leste     |     Vitoria    |
 

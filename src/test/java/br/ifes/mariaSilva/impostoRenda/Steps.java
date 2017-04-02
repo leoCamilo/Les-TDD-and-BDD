@@ -19,8 +19,8 @@ public class Steps {
     CalculaImpostoStrategy calcImposto;
 
     @Given("^Eu recebo \"([^\"]*)\" mensalmente$")
-    public void eu_recebo_mensalmente(double arg1) throws Throwable {
-        this.pessoa = new Pessoa(arg1);
+    public void eu_recebo_mensalmente(String arg1) throws Throwable {
+        this.pessoa = new Pessoa(Double.parseDouble(arg1));
     }
 
     @When("^Valor minimo \"([^\"]*)\" e valor maximo \"([^\"]*)\"$")

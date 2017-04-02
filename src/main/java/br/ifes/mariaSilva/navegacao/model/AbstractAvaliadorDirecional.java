@@ -14,13 +14,9 @@ public abstract class AbstractAvaliadorDirecional implements Expressao {
     private final Map<String, Cidade> cidades;
     protected AbstractAvaliadorDirecional proximo;
     protected String direcao;
-    protected Cidade cidadeAtual = new Cidade("aqui", 0, 0);
+    protected Cidade cidadeAtual = new Cidade("Cidade Inicial", 0, 0);
     protected abstract Cidade executar(Stack<Cidade> expressoes);
     protected abstract String[] matchingWords();
-
-    public void setCidadeAtual(Cidade args){
-        this.cidadeAtual = args;
-    }
 
     public Cidade getCidadeAtual() {
         return this.cidadeAtual;
